@@ -135,3 +135,94 @@ public class GeometriHesap {
         input.close();
     }
 }
+
+ ODEV JAVA KODU
+     
+     public class GeometriHesap {
+
+    // 1️⃣ Kare Alanı
+    public static double calculateSquareArea(double side) {
+        return side * side;
+    }
+
+    // 2️⃣ Kare Çevresi
+    public static double calculateSquarePerimeter(double side) {
+        return 4 * side;
+    }
+
+    // 3️⃣ Dikdörtgen Alanı
+    public static double calculateRectangleArea(double width, double height) {
+        return width * height;
+    }
+
+    // 4️⃣ Dikdörtgen Çevresi
+    public static double calculateRectanglePerimeter(double width, double height) {
+        return 2 * (width + height);
+    }
+
+    // 5️⃣ Daire Alanı
+    public static double calculateCircleArea(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+    // 6️⃣ Daire Çevresi
+    public static double calculateCircleCircumference(double radius) {
+        return 2 * Math.PI * radius;
+    }
+
+    // 7️⃣ Üçgen Alanı
+    public static double calculateTriangleArea(double base, double height) {
+        return (base * height) / 2;
+    }
+
+    // 8️⃣ Üçgen Çevresi
+    public static double calculateTrianglePerimeter(double a, double b, double c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        // 🔹 Örnek değerler
+        double squareSide = 5.0;       // Kare kenarı
+        double rectWidth = 4.0;        // Dikdörtgen kısa kenar
+        double rectHeight = 7.0;       // Dikdörtgen uzun kenar
+        double radius = 3.0;           // Daire yarıçapı
+        double triBase = 6.0;          // Üçgen tabanı
+        double triHeight = 4.0;        // Üçgen yüksekliği
+        double side1 = 5.0, side2 = 6.0, side3 = 7.0; // Üçgen kenarları
+
+        // 🔹 Hesaplamalar
+        double squareArea = calculateSquareArea(squareSide);
+        double squarePerimeter = calculateSquarePerimeter(squareSide);
+
+        double rectArea = calculateRectangleArea(rectWidth, rectHeight);
+        double rectPerimeter = calculateRectanglePerimeter(rectWidth, rectHeight);
+
+        double circleArea = calculateCircleArea(radius);
+        double circleCircumference = calculateCircleCircumference(radius);
+
+        double triangleArea = calculateTriangleArea(triBase, triHeight);
+        double trianglePerimeter = calculateTrianglePerimeter(side1, side2, side3);
+
+        // 🔹 Sonuçlar
+        System.out.println("=== GEOMETRİK HESAPLAMA SONUÇLARI ===");
+
+        System.out.printf("\nKARE (kenar: %.1f cm)\n", squareSide);
+        System.out.printf("Alan: %.2f cm²\n", squareArea);
+        System.out.printf("Çevre: %.2f cm\n", squarePerimeter);
+
+        System.out.printf("\nDİKDÖRTGEN (%.1f x %.1f cm)\n", rectWidth, rectHeight);
+        System.out.printf("Alan: %.2f cm²\n", rectArea);
+        System.out.printf("Çevre: %.2f cm\n", rectPerimeter);
+
+        System.out.printf("\nDAİRE (yarıçap: %.1f cm)\n", radius);
+        System.out.printf("Alan: %.2f cm²\n", circleArea);
+        System.out.printf("Çevre: %.2f cm\n", circleCircumference);
+
+        System.out.printf("\nÜÇGEN (taban: %.1f cm, yükseklik: %.1f cm)\n", triBase, triHeight);
+        System.out.printf("Alan: %.2f cm²\n", triangleArea);
+        System.out.printf("Çevre: %.2f cm\n", trianglePerimeter);
+
+        System.out.println("======================================");
+    }
+}
+
